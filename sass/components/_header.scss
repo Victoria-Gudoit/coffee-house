@@ -1,0 +1,85 @@
+.header {
+  &-img {
+    margin-top: 20px;
+  }
+  &-logo {
+    cursor: pointer;
+  }
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  &-nav {
+    @include _768 {
+      display: none;
+    }
+    &--burger {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      transform: translate(-50%, -50%);
+      background-color: #e1d4c9;
+      transition: transform 0.5s;
+    }
+
+    &__link {
+      color: #403f3d;
+      font-size: 1.6rem;
+      font-weight: 600;
+      line-height: 150%;
+      margin-right: 40px;
+      @include _768 {
+        margin-right: 0;
+        margin-bottom: 60px;
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+  }
+  &-menu {
+    @include _768 {
+      display: none;
+    }
+    &__link {
+      cursor: pointer;
+      color: #403f3d;
+      font-size: 1.6rem;
+      font-weight: 600;
+      line-height: 150%;
+
+      &:hover {
+        border-bottom: 1px solid #000;
+      }
+      &--active {
+        border-bottom: 1px solid #000;
+      }
+      &--press {
+        border-bottom: 1px solid #000;
+      }
+
+      &::after {
+        content: url(../../assets/images/coffee-cup.svg);
+        margin-left: 8px;
+        position: relative;
+        top: 4px;
+        left: 0px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}

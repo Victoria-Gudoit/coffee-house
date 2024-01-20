@@ -1,0 +1,105 @@
+.menu {
+  &__title {
+    margin: 0 auto;
+    font-style: italic;
+    line-height: 75px;
+    text-align: center;
+    width: 80rem;
+    margin-bottom: 4rem;
+    &--color {
+      color: #b0907a;
+    }
+    @include _768 {
+      width: 67rem;
+    }
+  }
+  &__goods {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    flex-wrap: wrap;
+  }
+  &__loading {
+    position: relative;
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #665f55;
+    background-color: transparent;
+
+    &::before {
+      content: url(../../assets/images/loading.svg);
+      position: absolute;
+      left: 32%;
+      top: 59%;
+      cursor: pointer;
+    }
+  }
+}
+
+.btns-menu {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  &__btn {
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+    border: 1px solid #c1b6ad;
+    height: 4.6rem;
+    padding: 8px 16px 8px 8px;
+    &-title {
+      font-size: 16px;
+      line-height: 24px;
+      padding-left: 8px;
+    }
+    &-icon {
+      position: relative;
+      width: 30px;
+      height: 30px;
+      border-radius: 100px;
+      background-color: #c1b6ad;
+    }
+    &-svg {
+      position: absolute;
+      bottom: 28%;
+      right: 6px;
+    }
+  }
+}
+
+.good {
+  border-radius: 40px;
+  border: 1px solid #c1b6ad;
+  margin-bottom: 40px;
+
+  &__img {
+    border-radius: 40px;
+    width: 310px;
+    height: 310px;
+  }
+  &__title {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 2.4rem;
+    line-height: 30px;
+  }
+  &__text {
+    margin-top: 12px;
+    margin-left: 20px;
+
+    font-size: 1.6rem;
+    line-height: 24px;
+    width: 27rem;
+  }
+  &__price {
+    margin-left: 20px;
+
+    font-size: 24px;
+    line-height: 30px;
+  }
+}

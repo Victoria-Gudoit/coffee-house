@@ -1,0 +1,121 @@
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e1d4c9;
+  font-family: "Inter", sans-serif;
+  font-size: 6rem;
+  color: #403f3d;
+}
+h1,
+h2,
+h3 {
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 40px;
+  max-width: 1360px;
+  @include _380 {
+    padding: 0 25px;
+  }
+}
+
+svg path {
+  stroke: inherit;
+  stroke-width: inherit;
+  fill: inherit;
+}
+.burger::before {
+  content: "";
+  left: 30%;
+  top: 40%;
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  background-color: #403f3d;
+}
+
+.burger::after {
+  content: "";
+  position: absolute;
+  left: 30%;
+  top: 60%;
+  width: 16px;
+  height: 2px;
+  background-color: #403f3d;
+}
+
+.burger {
+  position: relative;
+  display: none;
+  width: 44px;
+  height: 44px;
+  background-color: transparent;
+  border: 1px solid #665f55;
+  border-radius: 100%;
+  padding: 20px;
+  transition: transform 0.5s;
+
+  &--close::before,
+  &--close::after {
+    top: 50%;
+  }
+  &--close::before {
+    transition: transform 0.5s;
+    transform: rotate(45deg);
+  }
+  &--close::after {
+    transition: transform 0.5s;
+    transform: rotate(-45deg);
+  }
+
+  @include _768 {
+    display: block;
+    padding-left: 15px;
+  }
+}
+
+.swiper {
+  // width: 1360px;
+  // height: 480px;
+}

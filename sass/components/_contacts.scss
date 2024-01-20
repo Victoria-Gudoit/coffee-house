@@ -1,0 +1,79 @@
+.contacts {
+  background-color: #665f55;
+  border-radius: 40px;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  display: flex;
+  gap: 10rem;
+  @include _768 {
+    flex-direction: column;
+    gap: 6rem;
+  }
+  @include _380 {
+    gap: 2rem;
+  }
+  @include _380 {
+    padding-top: 59px;
+  }
+  &-offer {
+    &__title {
+      font-weight: 600;
+      line-height: 75px;
+      font-style: italic;
+      color: #e1d4c9;
+      margin-bottom: 4rem;
+
+      @include _380 {
+        line-height: 40px;
+        font-size: 32px;
+      }
+      &--color {
+        color: #b0907a;
+      }
+    }
+    &__social {
+      &-img {
+        cursor: pointer;
+      }
+    }
+  }
+  &-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: #e1d4c9;
+    &__title {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 30px;
+      margin-bottom: 4rem;
+    }
+    &__address {
+      font-weight: 600;
+      font-size: 1.6rem;
+      line-height: 24px;
+      &::before {
+        content: url(../../assets/images/pin-alt.svg);
+        padding-right: 8px;
+      }
+    }
+    &__tel {
+      font-weight: 600;
+      font-size: 1.6rem;
+      line-height: 24px;
+      &::before {
+        content: url(../../assets/images/Path.svg);
+        padding-right: 8px;
+      }
+    }
+    &__hours {
+      font-weight: 600;
+      font-size: 1.6rem;
+      line-height: 24px;
+      &::before {
+        content: url(../../assets/images/clock.svg);
+        padding-right: 8px;
+      }
+    }
+  }
+}

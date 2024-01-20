@@ -1,0 +1,99 @@
+.mobile-app {
+  display: flex;
+  @include _768 {
+    flex-direction: column;
+  }
+  @include _380 {
+    margin-bottom: 100px;
+  }
+  &__offer {
+    display: flex;
+    flex-direction: column;
+    margin: 14.4rem 0;
+    @include _380 {
+      margin: 6.4rem 0;
+    }
+    &-title {
+      font-weight: 600;
+      font-style: italic;
+      line-height: 75px;
+      width: 63rem;
+      &--color {
+        color: #b0907a;
+      }
+      // @include _768 {
+      //   width: 65rem;
+      // }
+
+      // @include _380 {
+      //   width: 34rem;
+      //   font-size: 32px;
+      //   line-height: 40px;
+      // }
+    }
+    &-text {
+      font-size: 1.6rem;
+      line-height: 24px;
+      width: 63rem;
+      margin: 4rem 0;
+      @include _768 {
+        width: 67rem;
+      }
+      @include _380 {
+        width: 35rem;
+      }
+    }
+  }
+
+  &__screens {
+    &-img {
+      margin-left: 7.5rem;
+      @include _768 {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.offer-btns {
+  display: flex;
+  gap: 2rem;
+
+  @include _380 {
+    flex-direction: column;
+  }
+  &__btn {
+    cursor: pointer;
+    border: 1px solid #665f55;
+    background-color: transparent;
+    padding: 12px 58px 12px 12px;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    @include _380 {
+      width: 208px;
+    }
+
+    &-svg {
+      margin-right: 8px;
+    }
+    &:hover {
+      background-color: #665f55;
+    }
+    &-app {
+      font-size: 10px;
+      line-height: 14px;
+      &--left {
+        text-align-last: left;
+      }
+    }
+  }
+}
+
+.offer-btns__btn:hover .offer-btns__btn-svg {
+  stroke: #e1d4c9;
+  fill: #e1d4c9;
+}

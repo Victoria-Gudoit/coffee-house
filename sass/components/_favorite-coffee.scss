@@ -1,0 +1,131 @@
+.favorite-coffee {
+  // position: relative;
+
+  // &::after {
+  //   content: url(../../assets/images/arrow.svg);
+  //   position: absolute;
+  //   top: 50%;
+  //   margin-top: -50px;
+  //   right: 50%;
+  //   margin-right: -45%;
+  //   cursor: pointer;
+  //   @include _380 {
+  //     display: none;
+  //   }
+  // }
+  &__title {
+    margin: 100px 0 40px 0;
+    text-align: center;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 6rem;
+    line-height: 75px;
+
+    @include _380 {
+      font-size: 32px;
+      line-height: 40px;
+      width: 110%;
+    }
+
+    &--color {
+      color: #b0907a;
+    }
+  }
+}
+
+.favorite-coffee-slider {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  &__img {
+    margin-bottom: 20px;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 30px;
+  }
+  &__text {
+    font-size: 1.6rem;
+    line-height: 24px;
+    width: 35%;
+    margin: 16px 0;
+    @include _768 {
+      width: 70%;
+    }
+    @include _380 {
+      width: 111%;
+      text-align: center;
+    }
+  }
+  &__price {
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 30px;
+    margin-bottom: 40px;
+  }
+  // &-dividers {
+  //   display: flex;
+  //   &__divider {
+  //     width: 40px;
+  //     height: 4px;
+  //     border-radius: 100px;
+  //     background-color: #665f55;
+  //     margin-right: 10px;
+  //     &--light {
+  //       background-color: #c1b6ad;
+  //     }
+  //   }
+  // }
+}
+.swiper {
+  position: relative;
+}
+.swiper-button-prev {
+  content: url(../../assets/images/arrow.svg);
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  transform: rotate(180deg);
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  @include _380 {
+    display: none;
+  }
+}
+
+.swiper-button-next {
+  content: url(../../assets/images/arrow.svg);
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  right: 50%;
+  margin-right: -45%;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  @include _380 {
+    display: none;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  width: 40px;
+  height: 4px;
+  border-radius: 100px;
+  background-color: #665f55;
+  margin-right: 10px;
+}
+.swiper-pagination-bullet {
+  width: 40px;
+  height: 4px;
+  border-radius: 100px;
+
+  margin-right: 10px;
+  background-color: #c1b6ad;
+}
+
+.swiper-slide {
+  height: 480px;
+}
